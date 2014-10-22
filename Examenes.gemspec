@@ -6,9 +6,9 @@ require 'Examenes/version'
 Gem::Specification.new do |spec|
   spec.name          = "Examenes"
   spec.version       = Examenes::VERSION
-  spec.authors       = ["Krishna Hemnani"]
-  spec.email         = ["alu0100536874@ull.edu.es"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.authors       = ["Krishna Hemnani, Francisco Mendoza"]
+  spec.email         = ["alu0100536874@ull.edu.es, alu0100600582@ull.edu.es"]
+  spec.description   = %q{TODO: Gema para la clase 'Examenes'}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"

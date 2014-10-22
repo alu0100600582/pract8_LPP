@@ -1,6 +1,6 @@
 # Examenes
 
-TODO: Write a gem description
+TODO: Gema para la clase 'Examenes'
 
 ## Installation
 
@@ -17,8 +17,6 @@ Or install it yourself as:
     $ gem install Examenes
 
 ## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
