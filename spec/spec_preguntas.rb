@@ -14,12 +14,20 @@
       expect(@q.answers).not_to be_empty
     end
 
-     it "Se debe invocar a un metodo para obtener la pregunta" do
+    it "Se debe invocar a un metodo para obtener la pregunta" do
        expect(@q.respond_to? :obtener_respuestas)
     end
    
     it "Se debe invocar a un metodo para obtener las opciones de respuesta" do
        expect(@q.respond_to? :obtener_respuestas)
+    end
+   
+    it "Se va tener al menos una respuesta correcta" do
+      @q.num_c.should be_kind_of(Integer)
+    end    
+
+    it "Se debe mostar por la consola la pregunta y las opciones de respuesta" do
+      expect(@q.respond_to? :to_s)  
     end
 
 end
