@@ -21,3 +21,5 @@
     it "Se debe invocar a un metodo para obtener las opciones de respuesta" do
        expect(@q.respond_to? :obtener_respuestas)
     end
+    
+  end
