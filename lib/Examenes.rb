@@ -1,4 +1,4 @@
-require "Examenes/version"
+#require "Examenes/version"
 
  #!/usr/bin/env ruby
   # Clase 'Question'  que almacena y representa Preguntas sencillas de examen
