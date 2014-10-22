@@ -13,5 +13,11 @@
     it "Deben existir opciones de respuestas" do
       expect(@p.answers).not_to be_empty
     end
-    
-    
+
+     it "Se debe invocar a un metodo para obtener la pregunta" do
+       expect(@p.respond_to? :obtener_respuestas)
+    end
+   
+    it "Se debe invocar a un metodo para obtener las opciones de respuesta" do
+       expect(@p1.respond_to? :obtener_respuestas)
+    end
