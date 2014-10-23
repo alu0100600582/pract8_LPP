@@ -1,17 +1,18 @@
 #require "Examenes/version"
 
  #!/usr/bin/env ruby
-  # Clase 'Question'  que almacena y representa Preguntas sencillas de examen
+  #Clase 'Question' realiza las preguntas de examen
   class Question
     attr_accessor :answers, :title, :num_c
      
-    #Metodo para obtener el titulo de la pregunta mediante una introducción por     pantalla
+    #En este método se introduce la pregunta del examen
     def obtener_pregunta
       puts "Introduzca la pregunta"
       title = gets.chomp
       return title
     end
-     #Metodo para obtener las diferentes respuestas a la pregunta, manteniendo l     a suposición de que el numero de respuestas será el que nos proporcionen
+    
+     #En este método se almacenta las diferentes respuestas
     def obtener_respuestas
       puts "Introduzca numero de respuestas a la pregunta"
       num = gets.chomp.to_i
@@ -22,20 +23,21 @@
       end
       @answers = c
     end
-#Metodo para saber dentro de la clase Pregunta cual de las respuestas es la correcta, mediante un indice que apunta a un array
+    
+    #En este método se indica la posición de la respuesta correcta
     def obtener_correcta
       puts "Introduzca el numero de la respuesta correcta"
       @num_c = gets.chomp.to_i
     end
 
-    #Metodo para obtener una respuesta simple a una pregunta
+    # En este método se recibe una respuesta simple para una pregunta
     def obtener_respuesta
       puts "Introduzca la respuesta"
       ans = [gets.chomp]
       return ans
     end
 
-    #Metodo para inicializar la clase
+    # Constructor de método
     def initialize(title = obtener_pregunta, answers = obtener_respuestas, num_c = obtener_correcta)
       raise ArgumentError,
       "Title has to be a String, got #{title.class}" unless title.is_a? String
@@ -44,7 +46,7 @@
       @num_c = num_c
     end
 
-    #Metodo para mostrar por pantalla la pregunta y las posibles respuestas
+    # En este método se imprime las respuestas
     def to_s
       out = "# #{@title}" + "\n"
       i = 1
@@ -54,8 +56,11 @@
       end
       puts out
     end
+    
   end
-  c1 = Question.new
-  puts c1.to_s
-  puts c1.num_c
+  
+  
+  q = Question.new
+  puts q.to_s
+  puts q.num_c
 
