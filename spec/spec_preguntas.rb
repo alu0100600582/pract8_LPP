@@ -1,3 +1,4 @@
+ require 'spec_helper'
  require_relative '../lib/Examenes'
 
   describe Question do
@@ -15,7 +16,7 @@
     end
 
     it "Se debe invocar a un metodo para obtener la pregunta" do
-       expect(@q.respond_to? :obtener_respuestas)
+       expect(@q.respond_to? :obtener_pregunta)
     end
    
     it "Se debe invocar a un metodo para obtener las opciones de respuesta" do
