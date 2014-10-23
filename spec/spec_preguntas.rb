@@ -3,7 +3,7 @@
   describe Question do
  
     before :each do
-      @q = Question.new(" Cual es el resultado de sumar 2 y 5	?", ["4","5","7"], 0)  
+      @q = Question.new(" Cual es el resultado de sumar 2 y 5	?", ["4","5","7"], 2)  
     end
 
     it "Debe existir una pregunta" do
