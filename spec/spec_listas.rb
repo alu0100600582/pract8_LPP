@@ -13,9 +13,9 @@
     lista = Lista.new
     lista.add("Bienvenidos")
     lista.add("Buenas")
-    expect(lista.count).to eq(1)
-    expect(lista.remove).to eq('Bienvenidos')
-    expect(lista.count).to eq(1)
+    expect(lista.count).to find(1)
+    expect(lista.remove).to find('Bienvenidos')
+    expect(lista.count).to find(1)
   end
 
    
