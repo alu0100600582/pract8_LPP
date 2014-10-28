@@ -1,5 +1,5 @@
  require 'spec_helper'
- require_relative '../lib/Examenes/Listas.rb'
+ require_relative '../lib/Listas.rb'
 
  
  describe Lista do
@@ -11,11 +11,11 @@
   
   it " Se extrae el primer elemento de la lista" do
     lista = Lista.new
-    lista.add("Bienvenidos")
-    lista.add("Buenas")
-    expect(lista.count).to find(1)
-    expect(lista.remove).to find('Bienvenidos')
-    expect(lista.count).to find(1)
+    lista.add(5)
+    lista.add(6)
+    expect(lista.count).to eq(2)
+    expect(lista.remove).to eq(5)
+    expect(lista.count).to eq(1)
   end
 
    
