@@ -4,32 +4,36 @@
 
 #Clase Node que implementa los nodos de la lista
 class Node
+    attr_accessor :value, :next
 
-  attr_accessor :link, :data
+    def initialize(value = nil)
+        @value = value
+    end
 
-  def initialize(content)
-    @link = nil
-    @data = content
-  end
-
+    def to_s
+        @value
+    end
 end
+
 
 #Clase Lista que genera una Lista Enlazada
 class Lista
 
-  attr_reader :head
+    attr_accessor :head
 
-#Metodo count que devuelve el numero de nodos de la lista 
-  def count
-    return 0 if head.nil?
-
-    node_count = 1
-    current = head
-    while current.link
-      current = current.link
-      node_count += 1
+#Metodo initialize que inicia la lista enlazada
+    def initialize(first_value=nil)
+      @head = Node.new(first_value) if first_value
     end
-    node_count
-  end
 
+#Metodo find devuelve los nodos de la lista
+    def find(value)
+      current_node = head
+      while current_node != nil
+        return current_node if current_node.value == value
+        current_node = current_node.next
+      end
+      nil
+    end
+   
 end
