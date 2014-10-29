@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class Node
 	attr_reader :val, :siguiente
 	attr_writer :val, :siguiente
@@ -15,7 +17,7 @@ class Lista
 		@head = Node.new(vector[0],nil)
 		aux = Node.new(vector[1],nil)
 		@tail = aux
-		@head.siguiente = @aux
+		@head.siguiente = @tail   #@aux?
 		(2..vector.length).each do |i|
 			aux.siguiente = Node.new(vector[i],nil)
 			@tail = aux.siguiente
