@@ -17,29 +17,32 @@ class Lista
 		@head = Node.new(vector[0],nil)
 		aux = Node.new(vector[1],nil)
 		@tail = aux
-		@head.siguiente = @tail   #@aux?
-		(2..vector.length).each do |i|
-			aux.siguiente = Node.new(vector[i],nil)
-			@tail = aux.siguiente
+		@head.siguiente = @tail
+	        if (vector.length >= 2)
+		  (0..vector.length-1).each do |i|
+		    aux.siguiente = Node.new(vector[i],nil)
+		    @tail = aux.siguiente
+		    puts @tail.val
+		  end
 		end
 	end
 	def pop_fin
 		aux = @tail.val
 		@tail.val = 0
-		@tail = @tail.prev
+		#@tail = @tail.prev
 		@tail.siguiente = nil
 		return aux
 	end
 	def pop_ini
 		aux = @head.val
 		@head = @head.siguiente
-		@head.prev = nil
+		#@head.prev = nil
 		return aux
 	end
 	def push_fin (val)
 		aux = Node.new(val,nil)
 		@tail = aux
-		@tail.prev.siguiente = @tail
+		#@tail.prev.siguiente = @tail
 		return true
 	end
 	def push_ini (val)
@@ -57,9 +60,17 @@ class Lista
 	end
 	def push_ini_m (vector)
 		(0..vector.length).each do |i|
-			aux = Node.new(val,@head)
+			aux = Node.new(vector[i],@head)
 			@head = aux
 		end
 		return true
 	end
 end
+@n1 = Node.new(3,@n2)
+@n2 = Node.new(5,@n3)
+@n3 = Node.new(6,nil)
+
+@lista = Lista.new([3,5,6])
+@lista.pop_fin
+
+

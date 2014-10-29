@@ -1,3 +1,4 @@
+require 'spec_helper'
 require "./lib/test.rb"
 
 describe Test do
