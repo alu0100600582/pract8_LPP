@@ -1,4 +1,4 @@
-require "lib/test.rb"
+require "./lib/test.rb"
 
 describe Test do
   before :each do

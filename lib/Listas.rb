@@ -3,7 +3,7 @@
 class Node
 	attr_reader :val, :siguiente
 	attr_writer :val, :siguiente
-	def initializer (val,siguiente)
+	def initialize (val,siguiente)
 		@val = val
 		@siguiente = siguiente
 		@prev = nil
@@ -13,7 +13,7 @@ end
 class Lista
 	attr_reader :head, :tail
 	attr_writer :head, :tail
-	def initializer (vector)
+	def initialize (vector)
 		@head = Node.new(vector[0],nil)
 		aux = Node.new(vector[1],nil)
 		@tail = aux

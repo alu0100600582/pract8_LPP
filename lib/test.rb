@@ -1,3 +1,4 @@
+
 class Test
   attr_reader :q, :a1, :t, :a
   def initialize(q,a1,t,a)
