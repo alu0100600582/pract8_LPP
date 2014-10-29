@@ -1,12 +1,12 @@
  require 'spec_helper'
- require '../lib/Listas.rb'
+ require_relative '../lib/Listas.rb'
 
  
  describe Lista do
 	 before :each do
-		@nodo1 = Struct.new(3,@nodo2)
-		@nodo2 = Struct.new(5,nil)
-		@lista = ListaEnlazada.new([3,5,6,7])
+		@nodo1 = Node.new(3,@nodo2)
+		@nodo2 = Node.new(5,nil)
+		@lista = Lista.new([3,5])
 	end
 	describe "Valor de nodo1 = 3" do
 		it "Valor de nodo1 correcto" do
@@ -20,7 +20,7 @@
 	end
 	describe "Extracción de ultimo elemento de la lista" do
 		it "Extracción correcta" do
-			@lista.pop_fin.should eq(7)
+			@lista.pop_fin.should eq(5)
 		end
 	end
 	describe "Extracción del primer elemento de la lista" do
@@ -46,6 +46,7 @@
 	describe "Consulta de cabeza" do
 		it "Consulta de cabeza correcta" do
 			@lista.head.should eq(3)
-
-   
+  		end 
 end
+ end
+ 
