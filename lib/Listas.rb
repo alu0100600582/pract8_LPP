@@ -22,7 +22,6 @@ class Lista
 		  (0..vector.length-1).each do |i|
 		    aux.siguiente = Node.new(vector[i],nil)
 		    @tail = aux.siguiente
-		    puts @tail.val
 		  end
 		end
 	end
@@ -66,11 +65,6 @@ class Lista
 		return true
 	end
 end
-@n1 = Node.new(3,@n2)
-@n2 = Node.new(5,@n3)
-@n3 = Node.new(6,nil)
 
-@lista = Lista.new([3,5,6])
-@lista.pop_fin
 
 
