@@ -1,5 +1,5 @@
  require 'spec_helper'
- require "./lib/Listas.rb"
+ require "./lib/Examenes.rb"
   
  describe Lista do
    

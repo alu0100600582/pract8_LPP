@@ -8,5 +8,7 @@ task :default => :spec
 desc "Run RSpec code example"
 task :spec do
      sh "rspec spec/spec_listas.rb"
+     sh "rspec spec/test_spec.rb"
+
 end
 

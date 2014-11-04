@@ -1,5 +1,5 @@
 require 'spec_helper'
-require "./lib/test.rb"
+require "./lib/Examenes.rb"
 
 describe Test do
   before :each do

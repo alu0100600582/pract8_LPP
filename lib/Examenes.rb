@@ -1,6 +1,9 @@
-#require "Examenes/version"
+require "Examenes/version"
+require "Examenes/Listas.rb"
+require "Examenes/test.rb"
 
  #!/usr/bin/env ruby
+
   #Clase 'Question' realiza las preguntas de examen
   class Question
     attr_accessor :answers, :title, :num_c
