@@ -14,10 +14,28 @@ Node = Struct.new(:val, :siguiente, :prev)
 
 
 class Lista
+<<<<<<< HEAD
+	attr_reader :head, :tail
+	attr_writer :head, :tail
+	def initialize (vector)
+		@head = Node.new(vector[0],nil)
+		aux = Node.new(vector[1],nil)
+		@tail = aux
+		@head.siguiente = @tail
+        @head.prev= nil
+        @tail.prev= @head
+        if (vector.length >= 2)
+		  (0..vector.length-1).each do |i|
+		    aux.siguiente = Node.new(vector[i],nil)
+		    @tail = aux.siguiente
+		  end
+		end
+=======
 	attr_accessor :head, :tail
 	def initialize
 		@head= nil
 		@tail= nil
+>>>>>>> eac3988bfd3871735d80eda78bb07430b3b7de74
 	end
 
 	#	@head = Node.new(vector[0],nil)
