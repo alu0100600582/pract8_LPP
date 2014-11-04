@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 
 class Node
-	attr_reader :val, :siguiente
-	attr_writer :val, :siguiente
-	def initialize (val,siguiente)
+	attr_accessor :val, :siguiente, :prev
+	def initialize (val,siguiente,prev)
 		@val = val
 		@siguiente = siguiente
 		@prev = prev
@@ -11,6 +10,7 @@ class Node
 end
 
 class Lista
+<<<<<<< HEAD
 	attr_reader :head, :tail
 	attr_writer :head, :tail
 	def initialize (vector)
@@ -26,7 +26,24 @@ class Lista
 		    @tail = aux.siguiente
 		  end
 		end
+=======
+	attr_accessor :head, :tail
+	def initialize
+		@head= nil
+		@tail= nil
+>>>>>>> eac3988bfd3871735d80eda78bb07430b3b7de74
 	end
+
+	#	@head = Node.new(vector[0],nil)
+	#	aux = Node.new(vector[1],nil)
+	#	@tail = aux
+	#	@head.siguiente = @tail
+	#        if (vector.length >= 2)
+	#	  (0..vector.length-1).each do |i|
+	#	    aux.siguiente = Node.new(vector[i],nil)
+	#	    @tail = aux.siguiente
+#		end
+#	end
 	def pop_fin
 		aux = @tail.val
 		@tail.val = 0
