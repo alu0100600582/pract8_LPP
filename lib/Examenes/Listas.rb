@@ -1,13 +1,17 @@
 #!/usr/bin/env ruby
 
-class Node
-	attr_accessor :val, :siguiente, :prev
-	def initialize (val,siguiente,prev)
-		@val = val
-		@siguiente = siguiente
-		@prev = prev
-	end
-end
+#class Node
+#	attr_accessor :val, :siguiente, :prev
+#	def initialize (val,siguiente,prev)
+#		@val = val
+#		@siguiente = siguiente
+#		@prev = prev
+#	end
+#end
+
+
+Node = Struct.new(:val, :siguiente, :prev)
+
 
 class Lista
 	attr_accessor :head, :tail
@@ -29,38 +33,36 @@ class Lista
 	def pop_fin
 		aux = @tail.val
 		@tail.val = 0
-		#@tail = @tail.prev
+		@tail = @tail.prev
 		@tail.siguiente = nil
 		return aux
 	end
 	def pop_ini
 		aux = @head.val
 		@head = @head.siguiente
-		#@head.prev = nil
+		@head.prev = nil
 		return aux
 	end
 	def push_fin (val)
-		aux = Node.new(val,nil)
+		aux = Node.new(val,nil,@tail)
 		@tail = aux
-		#@tail.prev.siguiente = @tail
 		return true
 	end
 	def push_ini (val)
-		aux = Node.new(val,@head)
+		aux = Node.new(val,@head,nil)
 		@head = aux
 		return true
 	end
 	def push_fin_m (vector)
 		(0..vector.length).each do |i|
-			aux = Node.new(vector[i],nil)
+			aux = Node.new(vector[i],nil,@tail)
 			@tail = aux
-			@tail.prev.siguiente = @tail	
 		end			
 		return true
 	end
 	def push_ini_m (vector)
 		(0..vector.length).each do |i|
-			aux = Node.new(vector[i],@head)
+			aux = Node.new(vector[i],@head,nil)
 			@head = aux
 		end
 		return true
