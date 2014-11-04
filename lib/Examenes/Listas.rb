@@ -6,7 +6,7 @@ class Node
 	def initialize (val,siguiente)
 		@val = val
 		@siguiente = siguiente
-		#@prev = nil
+		@prev = prev
 	end
 end
 
@@ -18,7 +18,9 @@ class Lista
 		aux = Node.new(vector[1],nil)
 		@tail = aux
 		@head.siguiente = @tail
-	        if (vector.length >= 2)
+        @head.prev= nil
+        @tail.prev= @head
+        if (vector.length >= 2)
 		  (0..vector.length-1).each do |i|
 		    aux.siguiente = Node.new(vector[i],nil)
 		    @tail = aux.siguiente
