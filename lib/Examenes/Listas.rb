@@ -2,7 +2,7 @@
 
 #class Node
 #	attr_accessor :val, :siguiente, :prev
-#	def initialize (val,siguiente,prev)/Users/krrish/Documents/LPP/lpp_t_26/lib/Examenes/Listas.rb
+#	def initialize (val,siguiente,prev)
 #		@val = val
 #		@siguiente = siguiente
 #		@prev = prev
@@ -67,6 +67,43 @@ class Lista
 		end
 		return true
 	end
+
+  # Metodo para representar por pantalla una lista enlazada
+  def to_s
+    s = "NIL <-> "
+    if @head == nil
+       s << "NIL"
+    elsif @head.siguiente == nil
+      s << "#{@head.to_s}<-> NIL"
+    else
+      nodo = @head
+      while nodo.siguiente != nil 
+        s << "#{nodo.to_s}"
+        nodo = nodo.siguiente
+      end
+      s << "#{nodo.to_s}"
+      s << "NIL"
+    end
+    return s
+  end
+
+  # Metodo para obtener el numero de nodos de una lista
+  def length 
+    if @head == nil
+      num = 0
+    else
+      n = @head
+      num = 1
+      while n.siguiente != nil
+        num += 1
+        n = n.siguiente
+      end
+    end
+    num
+  end
+
+
+
 end
 
 
