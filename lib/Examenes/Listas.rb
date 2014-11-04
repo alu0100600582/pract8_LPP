@@ -6,7 +6,7 @@ class Node
 	def initialize (val,siguiente)
 		@val = val
 		@siguiente = siguiente
-		@prev = nil
+		#@prev = nil
 	end
 end
 
