@@ -2,7 +2,7 @@
 
 #class Node
 #	attr_accessor :val, :siguiente, :prev
-#	def initialize (val,siguiente,prev)
+#	def initialize (val,siguiente,prev)/Users/krrish/Documents/LPP/lpp_t_26/lib/Examenes/Listas.rb
 #		@val = val
 #		@siguiente = siguiente
 #		@prev = prev
