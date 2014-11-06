@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 
-
 Node = Struct.new(:val, :siguiente, :prev)
-
-
+	
 class Lista
 	attr_accessor :head, :tail
 	def initialize

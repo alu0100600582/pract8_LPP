@@ -1,4 +1,5 @@
  require 'spec_helper'
+ require "./lib/Examenes/Listas.rb"
  require "./lib/Examenes.rb"
   
  describe Lista do
@@ -10,9 +11,10 @@
 		@lista = Lista.new([3,5])
 		@n1.siguiente = @n2
         @n2.prev = @n1
-		expect(@n1.val) == 3
+        expect(@n1.val) == 3
 		expect(@n1.siguiente) == @n2
         expect(@n2.prev) == @n1
+
    end
 
 		it "Extracción de ultimo elemento de la lista" do
