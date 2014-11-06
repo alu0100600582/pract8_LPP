@@ -1,14 +1,5 @@
 #!/usr/bin/env ruby
 
-#class Node
-#	attr_accessor :val, :siguiente, :prev
-#	def initialize (val,siguiente,prev)
-#		@val = val
-#		@siguiente = siguiente
-#		@prev = prev
-#	end
-#end
-
 
 Node = Struct.new(:val, :siguiente, :prev)
 
@@ -20,16 +11,6 @@ class Lista
 		@tail= nil
 	end
 
-	#	@head = Node.new(vector[0],nil)
-	#	aux = Node.new(vector[1],nil)
-	#	@tail = aux
-	#	@head.siguiente = @tail
-	#        if (vector.length >= 2)
-	#	  (0..vector.length-1).each do |i|
-	#	    aux.siguiente = Node.new(vector[i],nil)
-	#	    @tail = aux.siguiente
-#		end
-#	end
 	def pop_fin
 		aux = @tail.val
 		@tail.val = 0
