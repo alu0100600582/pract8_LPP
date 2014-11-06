@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 
-Node = Struct.new(:val, :siguiente, :prev)
 	
 class Lista
 	attr_accessor :head, :tail
-	def initialize
-		@head= nil
+
+	Node = Struct.new(:val, :siguiente, :prev)
+
+
+        def initialize
+		@head = nil
 		@tail= nil
 	end
 
@@ -13,13 +16,13 @@ class Lista
 		aux = @tail.val
 		@tail.val = 0
 		@tail = @tail.prev
-		@tail.siguiente = nil
+#		@tail.siguiente = nil
 		return aux
 	end
 	def pop_ini
 		aux = @head.val
 		@head = @head.siguiente
-		@head.prev = nil
+#		@head.prev = nil
 		return aux
 	end
 	def push_fin (val)

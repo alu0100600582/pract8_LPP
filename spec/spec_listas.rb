@@ -1,19 +1,21 @@
  require 'spec_helper'
- require "./lib/Examenes/Listas.rb"
+
  require "./lib/Examenes.rb"
   
  describe Lista do
    
    before :each do
   
-		@n1 = Node.new(3,@n2,nil)
-		@n2 = Node.new(5,nil,@n1)
-		@lista = Lista.new([3,5])
-		@n1.siguiente = @n2
-        @n2.prev = @n1
-        expect(@n1.val) == 3
-		expect(@n1.siguiente) == @n2
-        expect(@n2.prev) == @n1
+	#	@n1 = Node.new(3,@n2,nil)
+	#	@n2 = Node.new(5,nil,@n1)
+		@lista = Lista.new
+		@lista.push_ini(3)
+		@lista.push_fin(5)
+	#	@n1.siguiente = @n2
+       	 #       @n2.prev = @n1
+          #      expect(@n1.val) == 3
+	#	expect(@n1.siguiente) == @n2
+         #       expect(@n2.prev) == @n1
 
    end
 
