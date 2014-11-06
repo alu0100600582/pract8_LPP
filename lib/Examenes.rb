@@ -1,6 +1,6 @@
 require "Examenes/version"
 require "Examenes/Listas.rb"
-require "Examenes/test.rb"
+
 
  #!/usr/bin/env ruby
 
