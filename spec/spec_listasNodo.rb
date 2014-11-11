@@ -1,4 +1,4 @@
-require "Examenes.rb"
+require "./lib/Examenes.rb"
 
   describe Node do
   before :all do
