@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Examenes (0.0.2)
+    Examenes (0.0.1)
 
 GEM
   remote: https://rubygems.org/
