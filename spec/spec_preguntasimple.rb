@@ -1,4 +1,4 @@
-require "simpleselect.rb"
+require "preguntasimple.rb"
   describe Simple do
     before :all do
     @var = Simple.new("Pregunta", ["respuesta1", "respuesta2","respuesta3","respuesta4"], 4)
