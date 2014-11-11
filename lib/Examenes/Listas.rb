@@ -1,92 +1,72 @@
-#!/usr/bin/env ruby
-
-	
-class Lista
-	attr_accessor :head, :tail
-
-	Node = Struct.new(:val, :siguiente, :prev)
-
-
-        def initialize
-		@head = nil
-		@tail= nil
-	end
-
-	def pop_fin
-		aux = @tail.val
-		@tail.val = 0
-		@tail = @tail.prev
-#		@tail.siguiente = nil
-		return aux
-	end
-	def pop_ini
-		aux = @head.val
-		@head = @head.siguiente
-#		@head.prev = nil
-		return aux
-	end
-	def push_fin (val)
-		aux = Node.new(val,nil,@tail)
-		@tail = aux
-		return true
-	end
-	def push_ini (val)
-		aux = Node.new(val,@head,nil)
-		@head = aux
-		return true
-	end
-	def push_fin_m (vector)
-		(0..vector.length).each do |i|
-			aux = Node.new(vector[i],nil,@tail)
-			@tail = aux
-		end			
-		return true
-	end
-	def push_ini_m (vector)
-		(0..vector.length).each do |i|
-			aux = Node.new(vector[i],@head,nil)
-			@head = aux
-		end
-		return true
-	end
-
-  # Metodo para representar por pantalla una lista enlazada
-  def to_s
-    s = "NIL <-> "
-    if @head == nil
-       s << "NIL"
-    elsif @head.siguiente == nil
-      s << "#{@head.to_s}<-> NIL"
-    else
-      nodo = @head
-      while nodo.siguiente != nil 
-        s << "#{nodo.to_s}"
-        nodo = nodo.siguiente
-      end
-      s << "#{nodo.to_s}"
-      s << "NIL"
-    end
-    return s
-  end
-
-  # Metodo para obtener el numero de nodos de una lista
-  def length 
-    if @head == nil
-      num = 0
-    else
-      n = @head
-      num = 1
-      while n.siguiente != nil
-        num += 1
-        n = n.siguiente
-      end
-    end
-    num
-  end
-
-
-
+class Node
+   
+   attr_accessor :value,:next,:prev
+   def initialize(value)
+      @value=value
+      @next = nil
+      @prev = nil
+   end
 end
 
-
-
+class List
+    include Enumerable
+    
+    def initialize(nodo)
+        raise unless nodo.is_a? (Node)
+        @head = nodo
+        @tail = nodo
+    end
+    def push (nodo)
+        raise unless nodo.is_a? (Node)
+        nodo.prev=@tail
+        @tail.next=nodo
+        @tail=nodo
+    end
+    
+    def multiple_push (nodos)
+        nodos.each { |i|
+            raise unless i.is_a? (Node)
+            push(i)
+        }
+    end
+    def pop 
+        aux = @head.value
+        @head = @head.next
+        @head.prev = nil
+        aux
+    end
+    def vacia?
+        a = false
+        if (@head == nil)
+            a = true
+        end 
+        a
+    end 
+    def headToTail()
+        val=[@head]
+        nodo=@head
+        while (nodo!=@tail)do
+            nodo=nodo.next
+            val.push(nodo)
+        end
+        val
+    end
+    def tailToHead()
+        val=[@tail]
+        nodo=@tail
+        while (nodo!=@head)do
+            nodo=nodo.prev
+            val.push(nodo)
+        end
+        val
+    end
+    def each 
+        val=[@tail]
+        nodo=@head
+        while (nodo!=@tail)do
+            nodo=nodo.next
+            val.push(nodo)
+        end
+        yield val
+    end
+end
