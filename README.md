@@ -1,4 +1,4 @@
-#Practica 7. Programacion Orientada a Objetos.Herencia.
+#Practica 8. Programacion Orientada a Objetos.Módulos.
  
 LPP_T_26
 
