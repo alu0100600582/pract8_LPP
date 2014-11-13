@@ -94,8 +94,8 @@ require "./lib/Examenes.rb"
       (@var1 > @var2).should eq(false)
       end
   
-      it "Se compara la dificultad usando ==" do
-      (@var2 == @var3).should eq(true)
+       it "Se compara la pregunta usando ==" do
+      (@var2 == @var3).should eq(false)
       end
       
       it "Se compara la dificultad de una true or false y una simpleselect" do
@@ -105,12 +105,28 @@ require "./lib/Examenes.rb"
   
    describe"se comprueba que es enumerable" do
       it "Se puede hacer un each" do
-      @lista.each{|i| i}
+      @lista.each {|i| i}
       end
       it "podemos obtener una cadena de la que extraer los datos" do
       cadena=""
       @lista.each{|i| cadena += i.to_s}
       cadena.to_s.should eq("3.-) Cual es la salida del siguiente codigo Ruby?\nclass Array\ndef say_hi\n\"Hey!\"\nend\nend\np[1, \"bob\"].say_hi\n\na) 1\nb) bob\nc) Hey\nd) Ninguna de las anteriores\n")
       end
+      
+      it "probando all" do
+      cadena=""
+      @lista.all? {|i| cadena += i.to_s}
+      end
+      
+       it "probando none" do
+      cadena=""
+      @lista.none? {|i| cadena += i.to_s}
+      end
+       
+      
+   #  it "Calcular maximo" do
+#       @lista.max.to_s.should  eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
+#     end
+      
   end
 end

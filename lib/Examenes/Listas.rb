@@ -69,6 +69,5 @@ class List
 	    yield nodo.value
             nodo=nodo.next
         end
-        #yield val
     end
 end

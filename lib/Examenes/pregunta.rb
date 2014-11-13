@@ -13,4 +13,10 @@ class Pregunta
     def <=> (other)
         @dif <=> other.dif
     end
+    
+    def == (other)
+        @preg == other.preg
+    end
+    
+    
 end
