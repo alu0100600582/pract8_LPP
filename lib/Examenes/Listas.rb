@@ -1,15 +1,12 @@
+Node = Struct.new(:value, :next, :prev)
+
 class Node
-     
-   attr_accessor :value,:next,:prev
-   def initialize(value, next, prev)
-      @value=value
-      @next = nil
-      @prev = nil
-   end
-   def to_s
-      @value.to_s
-   end
+    include Comparable
+    def <=> (other)
+        value <=> other.value
+    end
 end
+
 
 class List
     include Enumerable

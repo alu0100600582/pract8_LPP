@@ -2,8 +2,8 @@ require "Examenes/pregunta.rb"
 
 class VerdaderoFalso < Pregunta
     attr_reader :resp
-    def initialize (preg, dif)
-        super(preg, dif)
+    def initialize (preg, resp, correcta, dif)
+        super(preg, correcta, dif)
         @resp = ["a) Verdadero", "b)falso"]
     end
     def to_s 

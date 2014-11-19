@@ -2,8 +2,8 @@ require "Examenes/pregunta.rb"
 
 class Simple < Pregunta
     attr_reader :resp
-   def initialize (pregunta, resp, dif)
-       super(pregunta, dif)
+   def initialize (preg, resp, correcta, dif)
+       super(preg, correcta, dif)
        @resp = resp
    end
     def imprimir

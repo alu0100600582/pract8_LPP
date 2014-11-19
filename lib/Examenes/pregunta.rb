@@ -1,9 +1,10 @@
 class Pregunta
-    attr_reader :preg, :dif
+    attr_reader :preg, :correcta, :dif
     include Comparable
     
-    def initialize (preg, dif)
+    def initialize (preg, correcta, dif)
         @preg = preg
+	@correcta = correcta
         @dif = dif
     end
     def to_s
