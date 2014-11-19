@@ -1,24 +1,42 @@
-require "Examenes/pregunta.rb"
-
-class Simple < Pregunta
-    attr_reader :resp
-   def initialize (preg, resp, correcta, dif)
-       super(preg, correcta, dif)
-       @resp = resp
-   end
-    def imprimir
-        puts @preg
-        for i in @resp
-            puts i
-        end
+class S_simple
+  include Comparable
+  attr_accessor :pregunta, :respuesta, :dificultad, :correcta
+  def initialize(pre, resp,cor)
+    @pregunta=pre
+    @respuesta=resp
+    @correcta=cor
+  end
+  def <=>(other)
+    @dificultad<=>other.dificultad
+  end
+  #def ==(other)
+  #  @pregunta==other.pregunta
+  #end
+  def get_pregunta()
+    return @pregunta
+  end
+  def get_respuestas()
+    return @respuesta
+  end
+  def get_correcta()
+    return @correcta
+  end
+  
+  def resp_correcta(r)
+    if r==@correcta
+      puts "Respuesta correcta"
+      return true
+    else
+      print "Error, la respuesta correcta es: " 
+      puts @correcta
+      return false
     end
-    
-    def to_s
-        aux = super.to_s
-        
-        for i in @resp
-            aux = aux + i + "\n"
-        end
-        aux
-    end
+  end
+  
+  def mostrar_todo()
+    puts @pregunta
+      for i in @respuesta
+      puts i
+      end
+  end
 end
