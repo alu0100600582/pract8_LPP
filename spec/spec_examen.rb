@@ -31,6 +31,16 @@ describe Examen do
 	expect(@examen.to_s).to eq(cadena)
       end
   end
+  
+  @vf1 = VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego","a",5)
+  @nodoP5 = Node.new(@vf1,nil,@nodoP4)
+  @arrayNodosPreguntas = [@nodoP1,@nodoP2,@nodoP3,@nodoP4,@nodoP5]
+  
+  describe "#Comprobación preguntas y respuestas" do
+    it "#Comprobación pregunta 5" do
+      expect(@vf1.to_s).to eq("Es apropiado que una clase Tablero herede de una clase Juego\na)Cierto\nb)Falso\n")
+    end
+  end
     
     
 end   
