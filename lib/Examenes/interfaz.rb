@@ -1,5 +1,4 @@
-require_relative "Examenes/examen.rb"
-
+require "Examenes/examen.rb"
 
 class Interfaz
    

@@ -1,7 +1,7 @@
 class Node
-   
+     
    attr_accessor :value,:next,:prev
-   def initialize(value)
+   def initialize(value, next, prev)
       @value=value
       @next = nil
       @prev = nil

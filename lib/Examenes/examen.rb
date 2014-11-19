@@ -1,4 +1,4 @@
-require_relative "Examenes/Listas.rb"
+require "Examenes/Listas.rb"
 
 class Examen
      attr_reader :preguntas
@@ -7,8 +7,8 @@ class Examen
      end
      
      def insertQuestion(question)
-        nodoNuevo = Node.new(question,nil,@preguntas.cola)
-        nodoInsertado = @preguntas.insert(nodoNuevo)
+        nodoNuevo = Node.new(question,nil,@preguntas.tail)
+        nodoInsertado = @preguntas.push(nodoNuevo)
         nodoInsertado.value
      end
      
