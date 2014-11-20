@@ -1,5 +1,3 @@
-
-
 class Examen
 
  attr_accessor :exam, :npreguntas
