@@ -1,11 +1,35 @@
-class Interfaz
-   attr_accessor :examen 
-    
-    def initialize(ex)
-       @examen = ex
+require_relative 'examen'
+
+class Interface
+
+    def initialize(exam)
+        @theExam = exam
+        @userAnswers = Array.new(@theExam.numQuestion)
+        @numRight = 0
+    end
+
+    def make_exam
+        i = 0
+        puts @theExam.printQuestion
+            while @userAnswers.size() > i
+            puts @theExam.printQuestion
+            print "--> Respuesta = "
+            @userAnswers[i] = gets.chomp
+            if @userAnswers[i] == @theExam.examAnswers[i]
+            @numRight += 1
+            end
+            i += 1
+            end
+        puts " \n---- Resultado del examen ------ "
+            if pass
+            puts " ## --> Aprobado."
+            else
+            puts " ## --> Suspendido."
+            end
     end
     
-    def mostrar_pregunta
-       puts @examen.exam.get_ini().pregunta
+private
+    def pass
+    @userAnswers.size()/2 < @numRight
     end
 end

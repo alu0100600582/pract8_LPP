@@ -1,23 +1,23 @@
-class Pregunta
-    attr_reader :preg, :correcta, :dif
+class Question
     include Comparable
-    
-    def initialize (preg, correcta, dif)
-        @preg = preg
-	@correcta = correcta
-        @dif = dif
+    attr_reader :ask, :difficulty
+
+    def initialize(ask, difficulty = 0)
+    @ask = ask
+    @difficulty = difficulty
     end
+
     def to_s
-        aux = @preg + "\n"
-        aux
+    cadena = "#{@ask}\n"
+    cadena
     end
-    def <=> (other)
-        @dif <=> other.dif
+
+    def <=>(other)
+    return nil unless other.is_a? Question
+    @difficulty <=> other.difficulty
     end
-    
-    def == (other)
-        @preg == other.preg
+
+    def ==(other)
+    @difficulty == other.difficulty# && @ask == other.ask
     end
-    
-    
 end

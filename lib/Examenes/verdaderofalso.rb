@@ -1,8 +1,21 @@
-class Vof < S_simple
-   # attr_accessor :pregunta, :respuestas
-    def initialize(pre,cor)
-        @pregunta=pre
-        @respuesta=['a) verdadero','b) falso']
-        @correcta=cor
+require_relative 'pregunta'
+
+class TrueFalse < Question
+
+    def initialize(ask, difficulty= 0)
+    @answers = {
+    "a" => "Cierto",
+    "b" => "Falso"
+    }
+    super(ask, difficulty)
+    end
+
+    def to_s
+    cadena = ""
+    cadena << super.to_s
+    @answers.each do |m,i|
+    cadena += "#{m})#{i}\n"
+    end
+    cadena
     end
 end
