@@ -5,8 +5,8 @@ describe Examen do
 	
 	before :all do
 		@exam= Examen.new(2)
-		@pregunta1= S_simple.new('cuanto son 2+2?', ['1','2','22','ninguna de las anteriores'],'ninguna de las anteriores')
-		@pregunta2= Vof.new('2+3 es lo mismo que 3+2 por la propiedad asociativa ','falso')
+		@pregunta1= S_simple.new('1) Cuanto es la suma de 2+2?', ['1','2','22','ninguna de las anteriores'],'ninguna de las anteriores')
+		@pregunta2= Vof.new('2) 2+3 es lo mismo que 3+2 por la propiedad asociativa ','falso')
 		@exam.add_pregunta(@pregunta1)
 		@exam.add_pregunta(@pregunta2)
 		
@@ -38,7 +38,7 @@ end
 			@exam.exam.get_ini().should eq(@pregunta1)
 		end
 		it "se inserta bien el enunciado de la pregunta" do
-			@exam.exam.get_ini().pregunta.should eq('cuanto son 2+2?')
+			@exam.exam.get_ini().pregunta.should eq('1) Cuanto es la suma de 2+2?')
 		end
 		it "se insertan bien las respuestas de la pregunta" do
 			@exam.exam.get_ini().respuesta.should eq(['1','2','22','ninguna de las anteriores'])
