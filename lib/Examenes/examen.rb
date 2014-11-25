@@ -3,7 +3,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec'
 
-module Exam
+module Examenes
   class ExamenCompleto
     attr_reader :lista_preguntas, :lista_soluciones
     

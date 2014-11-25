@@ -6,7 +6,7 @@ require 'rspec'
 # create a Struct with :value and :next
 Node = Struct.new(:value, :next, :previous)
 
-module Exam
+module Examenes
   class List
     include Enumerable
     attr_reader :cabeza, :cola, :numeroNodos 

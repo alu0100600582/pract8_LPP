@@ -3,7 +3,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec'
 
-module Exam
+module Examenes
   class UI
     attr_reader :contenido, :aciertos, :nota
     
@@ -88,4 +88,24 @@ module Exam
     
     
   end
+  
+    def invertirLista(lista)
+        listaTemp = Examenes::List.new
+        lista.map { |elemento| listaTemp.push(elemento) }
+        return listaTemp
+    end
+
+    def invertirExamen(examen)
+        preguntas = examen.obtenerPreguntas
+        soluciones = examen.obtenerSoluciones
+        
+        preguntas = invertirLista(preguntas)
+        soluciones = invertirLista(soluciones)
+        
+        examen.establecerPreguntas(preguntas)
+        examen.establecerSoluciones(soluciones)
+        return examen
+    end        
+
+  
 end

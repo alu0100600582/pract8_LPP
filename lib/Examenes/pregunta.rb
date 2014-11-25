@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'rspec'
 require 'Examenes/version'
 
-module Exam
+module Examenes
   class Examen
     include Comparable
     attr_reader :pregunta, :respuestas
