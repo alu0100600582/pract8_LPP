@@ -5,7 +5,7 @@ require 'rspec'
 require 'Examenes/version'
 
 module Examenes
-  class Examen
+  class PreguntaSimple
     include Comparable
     attr_reader :pregunta, :respuestas
     
@@ -47,7 +47,7 @@ module Examenes
   
   
   
-  class Preguntas < Examen
+  class VerdaderoFalso < PreguntaSimple
       
     def initialize (pregunta)
       @pregunta = pregunta
