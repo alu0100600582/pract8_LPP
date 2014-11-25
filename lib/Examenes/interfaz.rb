@@ -82,13 +82,6 @@ module Examenes
       return notaFinal
     end
     
-    def invertir
-      @contenido = invertirExamen(@contenido)
-    end    
-    
-    
-  end
-  
     def invertirLista(lista)
         listaTemp = Examenes::List.new
         lista.map { |elemento| listaTemp.push(elemento) }
@@ -105,7 +98,15 @@ module Examenes
         examen.establecerPreguntas(preguntas)
         examen.establecerSoluciones(soluciones)
         return examen
-    end        
-
+    end      
+    
+    def invertir
+      @contenido = invertirExamen(@contenido)
+    end    
+    
+    
+  end
   
+      
+
 end

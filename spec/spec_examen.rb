@@ -326,7 +326,7 @@ describe Examenes::Examen do
   end
   
   it "Una UI tiene un metodo para recibir input del usuario" do
-    expect(@ui.input(1)).to eq(true)
+    expect(@ui.input(1,'d')).to eq(true)
   end
   
   it "Una UI compara la respuesta con la solucion" do
