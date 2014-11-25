@@ -3,6 +3,23 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec'
 
+
+
+# Autor::   
+#
+# = Modulo Examenes
+#
+# Probando RDOC
+#
+# === Clase ExamenCompleto
+#
+# Definición de la clase ExamenCompleto compuesta por
+# * metodo initialize
+# * metodo obtenerPreguntas
+#
+
+
+
 module Examenes
   class ExamenCompleto
     attr_reader :lista_preguntas, :lista_soluciones
