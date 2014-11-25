@@ -4,9 +4,9 @@ require './lib/Examenes.rb'
 
 
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @examen = Examenes::Examen.new("¿De que color es el caballo blanco de santiago?" , [ 'a) Rojo', 'b) Blanco', 'c) Azul' ])
+    @examen = Examenes::PreguntaSimple.new("¿De que color es el caballo blanco de santiago?" , [ 'a) Rojo', 'b) Blanco', 'c) Azul' ])
   end
 
   describe "# Existencia de pregunta" do
@@ -97,13 +97,13 @@ end
 
 
 #-------------------------------------------------------------------------------------------------------
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @pregunta1 = Examenes::Examen.new("¿Cual es la salida del siguiente codigo Ruby?/tclass Xyz/tdef pots/t@nice/tend/tend/txyz = Xyz.new/tp xyz.pots/t" , [ 'a) #<Xyz:0xa000208>', 'b) nil', 'c) 0', 'd) Ninguna de las anteriores' ])
-    @pregunta2 = Examenes::Examen.new("La siguiente definicion de un hash en Ruby es valida:/thash_raro = {/t[1, 2, 3] => Object.new(),/tHash.new => :toto/t}/t" , [ 'a) Cierto', 'b) Falso'])
-    @pregunta3 = Examenes::Examen.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
-    @pregunta4 = Examenes::Examen.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?/tclass Objeto/tend/t" , [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto' , 'd) Ninguna de las anteriores'])
-    @pregunta5 = Examenes::Examen.new("Es apropiado que una clase Tablero herede de una clase Juego./t" , [ 'a) Cierto', 'b) Falso'])
+    @pregunta1 = Examenes::PreguntaSimple.new("¿Cual es la salida del siguiente codigo Ruby?/tclass Xyz/tdef pots/t@nice/tend/tend/txyz = Xyz.new/tp xyz.pots/t" , [ 'a) #<Xyz:0xa000208>', 'b) nil', 'c) 0', 'd) Ninguna de las anteriores' ])
+    @pregunta2 = Examenes::PreguntaSimple.new("La siguiente definicion de un hash en Ruby es valida:/thash_raro = {/t[1, 2, 3] => Object.new(),/tHash.new => :toto/t}/t" , [ 'a) Cierto', 'b) Falso'])
+    @pregunta3 = Examenes::PreguntaSimplen.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
+    @pregunta4 = Examenes::PreguntaSimple.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?/tclass Objeto/tend/t" , [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto' , 'd) Ninguna de las anteriores'])
+    @pregunta5 = Examenes::PreguntaSimple.new("Es apropiado que una clase Tablero herede de una clase Juego./t" , [ 'a) Cierto', 'b) Falso'])
 
     @lista_preguntas = Examenes::List.new
     @lista_preguntas.push(@pregunta5,@pregunta4,@pregunta3,@pregunta2,@pregunta1)
@@ -144,7 +144,7 @@ end
 
 #-------------------------------------------------------------------------------------------------------
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
     @lista = Examenes::List.new
   end
@@ -160,8 +160,8 @@ describe Examenes::Examen do
   end  
 
   it "La preguntas y sus respuestas deben coincidir" do
-    @pregunta1 = Examenes::Examen.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
-    @pregunta2 = Examenes::Preguntas.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+    @pregunta1 = Examenes::PreguntaSimple.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
+    @pregunta2 = Examenes::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego.")
     @lista.push(@pregunta2,@pregunta1)
     
     expect(@lista.cabeza.value.pregunta).to eq("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end")
@@ -178,17 +178,17 @@ describe Examenes::Examen do
   
   
   it "Es pregunta1 hijo de el objeto examen" do
-    @pregunta1 = Examenes::Examen.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
-    @pregunta2 = Examenes::Preguntas.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+    @pregunta1 = Examenes::PreguntaSimple.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
+    @pregunta2 = Examenes::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego.")
     
-    expect(@pregunta1).to be_instance_of Examenes::Examen       #pregunta1 es instancia de Examen
-    expect(@pregunta2).to be_instance_of Examenes::Preguntas    #pregunta2 es instancia de Preguntas
+    expect(@pregunta1).to be_instance_of Examenes::PreguntaSimple       #pregunta1 es instancia de Examen
+    expect(@pregunta2).to be_instance_of Examenes::VerdaderoFalso    #pregunta2 es instancia de Preguntas
     
-    expect(@pregunta1).to be_a_kind_of Examenes::Examen         #pregunta1 esta en la jeraquia de Examen
-    expect(@pregunta1).not_to be_a_kind_of Examenes::Preguntas  #pregunta1 no esta en la jerarquia de Examen
+    expect(@pregunta1).to be_a_kind_of Examenes::PreguntaSimple         #pregunta1 esta en la jeraquia de Examen
+    expect(@pregunta1).not_to be_a_kind_of Examenes::VerdaderoFalso  #pregunta1 no esta en la jerarquia de Examen
     
-    expect(@pregunta2).to be_a_kind_of Examenes::Examen         #pregunta2 esta en la jerarquia de Examen
-    expect(@pregunta2).to be_a_kind_of Examenes::Preguntas      #pregunta2 esta en la jerarquia de Preguntas
+    expect(@pregunta2).to be_a_kind_of Examenes::PreguntaSimple        #pregunta2 esta en la jerarquia de Examen
+    expect(@pregunta2).to be_a_kind_of Examenes::VerdaderoFalso      #pregunta2 esta en la jerarquia de Preguntas
 
   end
   
@@ -199,11 +199,11 @@ end
 
 #-------------------------------------------------------------------------------------------------------
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @pregunta1 = Examenes::Preguntas.new("Es apropiado que una clase Tablero herede de una clase Juego.")
-    @pregunta2 = Examenes::Examen.new("Es apropiado que una clase Tablero herede de una clase Juego.", ["a) Cierto", "b) Falso"])
-    @pregunta3 = Examenes::Examen.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
+    @pregunta1 = Examenes::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+    @pregunta2 = Examenes::PreguntaSimple.new("Es apropiado que una clase Tablero herede de una clase Juego.", ["a) Cierto", "b) Falso"])
+    @pregunta3 = Examenes::PreguntaSimple.new("¿Cual es el tipo del objeto en el siguiente c´odigo Ruby? /t class Objeto /t end", [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto', 'd) Ninguna de las anteriores' ])
 
   end
   
@@ -234,13 +234,13 @@ end
   
 #------------------------------  
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @pregunta1 = Examenes::Examen.new("¿Cual es la salida del siguiente codigo Ruby?/tclass Xyz/tdef pots/t@nice/tend/tend/txyz = Xyz.new/tp xyz.pots/t" , [ 'a) #<Xyz:0xa000208>', 'b) nil', 'c) 0', 'd) Ninguna de las anteriores' ])
-    @pregunta2 = Examenes::Examen.new("La siguiente definicion de un hash en Ruby es valida:/thash_raro = {/t[1, 2, 3] => Object.new(),/tHash.new => :toto/t}/t" , [ 'a) Cierto', 'b) Falso'])
-    @pregunta3 = Examenes::Examen.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
-    @pregunta4 = Examenes::Examen.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?/tclass Objeto/tend/t" , [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto' , 'd) Ninguna de las anteriores'])
-    @pregunta5 = Examenes::Examen.new("Es apropiado que una clase Tablero herede de una clase Juego./t" , [ 'a) Cierto', 'b) Falso'])
+    @pregunta1 = Examenes::PreguntaSimple.new("¿Cual es la salida del siguiente codigo Ruby?/tclass Xyz/tdef pots/t@nice/tend/tend/txyz = Xyz.new/tp xyz.pots/t" , [ 'a) #<Xyz:0xa000208>', 'b) nil', 'c) 0', 'd) Ninguna de las anteriores' ])
+    @pregunta2 = Examenes::PreguntaSimplen.new("La siguiente definicion de un hash en Ruby es valida:/thash_raro = {/t[1, 2, 3] => Object.new(),/tHash.new => :toto/t}/t" , [ 'a) Cierto', 'b) Falso'])
+    @pregunta3 = Examenes::PreguntaSimple.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
+    @pregunta4 = Examenes::PreguntaSimple.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?/tclass Objeto/tend/t" , [ 'a) Una instancia de la clase Class', 'b) Una constante', 'c) Un objeto' , 'd) Ninguna de las anteriores'])
+    @pregunta5 = Examenes::PreguntaSimple.new("Es apropiado que una clase Tablero herede de una clase Juego./t" , [ 'a) Cierto', 'b) Falso'])
 
     @lista = Examenes::List.new
     @lista.push(@pregunta5,@pregunta4,@pregunta3,@pregunta2,@pregunta1)
@@ -273,10 +273,10 @@ end
 
 #------------------------------  
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @pregunta1 = Examenes::Preguntas.new("Es apropiado que una clase Tablero herede de una clase Juego.")
-    @pregunta2 = Examenes::Examen.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
+    @pregunta1 = Examenes::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+    @pregunta2 = Examenes::PreguntaSimple.new('¿Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
 
     @solucion1 = 'a'
     @solucion2 = 'd'
@@ -300,10 +300,10 @@ end
 
 #------------------------------  
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
-    @pregunta1 = Examenes::Preguntas.new("Es apropiado que una clase Tablero herede de una clase Juego.")
-    @pregunta2 = Examenes::Examen.new('Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
+    @pregunta1 = Examenes::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+    @pregunta2 = Examenes::PreguntaSimple.new('Cual es la salida del siguiente codigo Ruby?/tclass Array/tdef say_hi/t"HEY!"/t  end/t end/t /t p [1, "bob"].say_hi/t' , [ 'a) 1', 'b) bob', 'c) hey!' ,'d) Ninguna de las anteriores'])
 
     @solucion1 = 'a'
     @solucion2 = 'd'
@@ -326,7 +326,7 @@ describe Examenes::Examen do
   end
   
   it "Una UI tiene un metodo para recibir input del usuario" do
-    expect(@ui.input(1,'d')).to eq(true)
+    expect(@ui.input(1)).to eq(true)
   end
   
   it "Una UI compara la respuesta con la solucion" do
@@ -354,7 +354,7 @@ end
 
 #------------------------------  
 
-describe Examenes::Examen do
+describe Examenes::PreguntaSimple do
   before :each do
     @lista_preguntas = Examenes::List.new
     @lista_preguntas.push(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  
