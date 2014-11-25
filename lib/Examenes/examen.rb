@@ -1,35 +1,36 @@
-class Examen
+# -*- coding: utf-8 -*-
+require 'rubygems'
+require 'bundler/setup'
+require 'rspec'
 
- attr_accessor :exam, :npreguntas
-    def initialize(n)
-      @exam= List.new
-      @npreguntas=n
+module Exam
+  class ExamenCompleto
+    attr_reader :lista_preguntas, :lista_soluciones
+    
+    def initialize (preguntas, soluciones)
+      @lista_preguntas = preguntas
+      @lista_soluciones = soluciones
     end
-   
-    def add_pregunta(pre)
-        @exam.push(pre)
+
+    def obtenerPreguntas
+      return @lista_preguntas
     end
     
-    def resolver(resp)
-				preg_actual=0
-				preg_correctas=0
-					while preg_actual<@npreguntas
-						preg_actual=preg_actual+1
-						puts @exam.get_ini().pregunta
-						puts @exam.get_ini().respuesta
-						puts ""
-						
-						if @exam.get_ini().resp_correcta(resp[preg_actual-1])
-							preg_correctas=preg_correctas+1
-						end
-						@exam.pop()
-						puts""
-					end
-					print "Ha respondido bien "
-					print preg_correctas
-					print " preguntas de "
-					print @npreguntas
-					return preg_correctas
+    def establecerPreguntas(preguntas)
+      @lista_preguntas = preguntas
     end
     
-end  
+    def obtenerSoluciones
+      return @lista_soluciones
+    end
+    
+    def establecerSoluciones(soluciones)
+      @lista_soluciones = soluciones
+    end
+    
+    def obtenerPregunta(numero)
+      return @lista_preguntas.obtenerValor(numero).mostrar
+    end
+    
+  end
+end
