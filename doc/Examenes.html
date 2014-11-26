@@ -2,67 +2,81 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
 <title>module Examenes - RDoc Documentation</title>
 
-<link href="./fonts.css" rel="stylesheet">
-<link href="./rdoc.css" rel="stylesheet">
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
-<script src="./js/jquery.js"></script>
-<script src="./js/navigation.js"></script>
-<script src="./js/search_index.js"></script>
-<script src="./js/search.js"></script>
-<script src="./js/searcher.js"></script>
-<script src="./js/darkfish.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body id="top" role="document" class="module">
-<nav role="navigation">
-  <div id="project-navigation">
-    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
-  <h2>
-    <a href="./index.html" rel="home">Home</a>
-  </h2>
-
-  <div id="table-of-contents-navigation">
-    <a href="./table_of_contents.html#pages">Pages</a>
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
     <a href="./table_of_contents.html#classes">Classes</a>
     <a href="./table_of_contents.html#methods">Methods</a>
-  </div>
-</div>
+  </h3>
+</nav>
 
-    <div id="search-section" role="search" class="project-section initially-hidden">
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <div id="search-field-wrapper">
-      <input id="search-field" role="combobox" aria-label="Search"
-             aria-autocomplete="list" aria-controls="search-results"
-             type="text" name="search" placeholder="Search" spellcheck="false"
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </div>
-
-    <ul id="search-results" aria-label="Search Results"
-        aria-busy="false" aria-expanded="false"
-        aria-atomic="false" class="initially-hidden"></ul>
+    </h3>
   </form>
-</div>
 
-  </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
 
   
-<div class="nav-section">
-  <h3>Table of Contents</h3>
-
-  <ul class="link-list" role="directory">
-    <li><a href="#module-Examenes-label-Modulo+Examenes">Modulo Examenes</a>
-    <li><a href="#module-Examenes-label-Clase+ExamenCompleto">Clase ExamenCompleto</a>
-  </ul>
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-Modulo+Examenes">Modulo Examenes</a>
+      <li><a href="#label-Clase+ExamenCompleto">Clase ExamenCompleto</a>
+      <li><a href="#label-Modulo+Examenes">Modulo Examenes</a>
+      <li><a href="#label-Clase+UI">Clase UI</a>
+      <li><a href="#label-Modulo+Examenes">Modulo Examenes</a>
+      <li><a href="#label-Pregunta+Simple">Pregunta Simple</a>
+      <li><a href="#label-"></a>
+      <li><a href="#label-Verdadero+Falaso">Verdadero Falaso</a>
+    </ul>
+  </nav>
 </div>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/Examenes.rb
+    <li>lib/Examenes/Listas.rb
+    <li>lib/Examenes/examen.rb
+    <li>lib/Examenes/interfaz.rb
+    <li>lib/Examenes/pregunta.rb
+    <li>lib/Examenes/version.rb
+    <li>spec/spec_examen.rb
+  </ul>
+</nav>
+
+    
+  </div>
 
   <div id="class-metadata">
     
@@ -71,21 +85,455 @@
     
     
   </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Examenes_gemspec.html">Examenes.gemspec</a>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/Examenes_html.html">Examenes.html</a>
+  
+    <li class="file"><a href="./doc/Examenes/ExamenCompleto_html.html">ExamenCompleto.html</a>
+  
+    <li class="file"><a href="./doc/Examenes/List_html.html">List.html</a>
+  
+    <li class="file"><a href="./doc/Examenes/PreguntaSimple_html.html">PreguntaSimple.html</a>
+  
+    <li class="file"><a href="./doc/Examenes/UI_html.html">UI.html</a>
+  
+    <li class="file"><a href="./doc/Examenes/VerdaderoFalso_html.html">VerdaderoFalso.html</a>
+  
+    <li class="file"><a href="./doc/Examenes_gemspec_html.html">Examenes_gemspec.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="./doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="./doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="./doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="./doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes/ExamenCompleto_html_html.html">ExamenCompleto_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes/List_html_html.html">List_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes/PreguntaSimple_html_html.html">PreguntaSimple_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes/UI_html_html.html">UI_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes/VerdaderoFalso_html_html.html">VerdaderoFalso_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes_gemspec_html_html.html">Examenes_gemspec_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Examenes_html_html.html">Examenes_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Guardfile_html_html.html">Guardfile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/LICENSE_txt_html_html.html">LICENSE_txt_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Object_html_html.html">Object_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/README_md_html_html.html">README_md_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes/ExamenCompleto_html_html_html.html">ExamenCompleto_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes/List_html_html_html.html">List_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes/PreguntaSimple_html_html_html.html">PreguntaSimple_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes/UI_html_html_html.html">UI_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes/VerdaderoFalso_html_html_html.html">VerdaderoFalso_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes_gemspec_html_html_html.html">Examenes_gemspec_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Examenes_html_html_html.html">Examenes_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Gemfile_html_html_html.html">Gemfile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Gemfile_lock_html_html_html.html">Gemfile_lock_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Guardfile_html_html_html.html">Guardfile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/LICENSE_txt_html_html_html.html">LICENSE_txt_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Object_html_html_html.html">Object_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/README_md_html_html_html.html">README_md_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Rakefile_html_html_html.html">Rakefile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes/ExamenCompleto_html_html_html_html.html">ExamenCompleto_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes/List_html_html_html_html.html">List_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes/PreguntaSimple_html_html_html_html.html">PreguntaSimple_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes/UI_html_html_html_html.html">UI_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes/VerdaderoFalso_html_html_html_html.html">VerdaderoFalso_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes_gemspec_html_html_html_html.html">Examenes_gemspec_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Examenes_html_html_html_html.html">Examenes_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Gemfile_html_html_html_html.html">Gemfile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Gemfile_lock_html_html_html_html.html">Gemfile_lock_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Guardfile_html_html_html_html.html">Guardfile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/LICENSE_txt_html_html_html_html.html">LICENSE_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Object_html_html_html_html.html">Object_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/README_md_html_html_html_html.html">README_md_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Rakefile_html_html_html_html.html">Rakefile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes/ExamenCompleto_html_html_html_html_html.html">ExamenCompleto_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes/List_html_html_html_html_html.html">List_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes/PreguntaSimple_html_html_html_html_html.html">PreguntaSimple_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes/UI_html_html_html_html_html.html">UI_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes/VerdaderoFalso_html_html_html_html_html.html">VerdaderoFalso_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes_gemspec_html_html_html_html_html.html">Examenes_gemspec_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Examenes_html_html_html_html_html.html">Examenes_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html.html">Gemfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html.html">Gemfile_lock_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html.html">Guardfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html.html">LICENSE_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Object_html_html_html_html_html.html">Object_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/README_md_html_html_html_html_html.html">README_md_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html.html">Rakefile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes/ExamenCompleto_html_html_html_html_html_html.html">ExamenCompleto_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes/List_html_html_html_html_html_html.html">List_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes/PreguntaSimple_html_html_html_html_html_html.html">PreguntaSimple_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes/UI_html_html_html_html_html_html.html">UI_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes/VerdaderoFalso_html_html_html_html_html_html.html">VerdaderoFalso_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes_gemspec_html_html_html_html_html_html.html">Examenes_gemspec_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Examenes_html_html_html_html_html_html.html">Examenes_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Object_html_html_html_html_html_html.html">Object_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/README_md_html_html_html_html_html_html.html">README_md_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes/ExamenCompleto_html_html_html_html_html_html_html.html">ExamenCompleto_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes/List_html_html_html_html_html_html_html.html">List_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes/PreguntaSimple_html_html_html_html_html_html_html.html">PreguntaSimple_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes/UI_html_html_html_html_html_html_html.html">UI_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes/VerdaderoFalso_html_html_html_html_html_html_html.html">VerdaderoFalso_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes_gemspec_html_html_html_html_html_html_html.html">Examenes_gemspec_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Examenes_html_html_html_html_html_html_html.html">Examenes_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Object_html_html_html_html_html_html_html.html">Object_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/README_md_html_html_html_html_html_html_html.html">README_md_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes/ExamenCompleto_html_html_html_html_html_html_html_html.html">ExamenCompleto_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes/List_html_html_html_html_html_html_html_html.html">List_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes/PreguntaSimple_html_html_html_html_html_html_html_html.html">PreguntaSimple_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes/UI_html_html_html_html_html_html_html_html.html">UI_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes/VerdaderoFalso_html_html_html_html_html_html_html_html.html">VerdaderoFalso_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes_gemspec_html_html_html_html_html_html_html_html.html">Examenes_gemspec_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Examenes_html_html_html_html_html_html_html_html.html">Examenes_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Object_html_html_html_html_html_html_html_html.html">Object_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/README_md_html_html_html_html_html_html_html_html.html">README_md_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/fonts_css_html_html_html_html_html_html_html.html">fonts_css_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html_html_html.html">index_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html_html_html.html">darkfish_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html_html_html.html">jquery_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/navigation_js_html_html_html_html_html_html_html.html">navigation_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/search_index_js_html_html_html_html_html_html_html.html">search_index_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/search_js_html_html_html_html_html_html_html.html">search_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/js/searcher_js_html_html_html_html_html_html_html.html">searcher_js_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/rdoc_css_html_html_html_html_html_html_html.html">rdoc_css_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/doc/table_of_contents_html_html_html_html_html_html_html_html.html">table_of_contents_html_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/fonts_css_html_html_html_html_html_html.html">fonts_css_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html_html.html">index_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html_html.html">darkfish_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html_html.html">jquery_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/navigation_js_html_html_html_html_html_html.html">navigation_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/search_index_js_html_html_html_html_html_html.html">search_index_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/search_js_html_html_html_html_html_html.html">search_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/js/searcher_js_html_html_html_html_html_html.html">searcher_js_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/rdoc_css_html_html_html_html_html_html.html">rdoc_css_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/doc/table_of_contents_html_html_html_html_html_html_html.html">table_of_contents_html_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/fonts_css_html_html_html_html_html.html">fonts_css_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html.html">index_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html.html">darkfish_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html.html">jquery_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/navigation_js_html_html_html_html_html.html">navigation_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/search_index_js_html_html_html_html_html.html">search_index_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/search_js_html_html_html_html_html.html">search_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/searcher_js_html_html_html_html_html.html">searcher_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/rdoc_css_html_html_html_html_html.html">rdoc_css_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/table_of_contents_html_html_html_html_html_html.html">table_of_contents_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/fonts_css_html_html_html_html.html">fonts_css_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/index_html_html_html_html_html.html">index_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html.html">darkfish_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html.html">jquery_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/navigation_js_html_html_html_html.html">navigation_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/search_index_js_html_html_html_html.html">search_index_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/search_js_html_html_html_html.html">search_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/searcher_js_html_html_html_html.html">searcher_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/rdoc_css_html_html_html_html.html">rdoc_css_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/table_of_contents_html_html_html_html_html.html">table_of_contents_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/fonts_css_html_html_html.html">fonts_css_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/index_html_html_html_html.html">index_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/darkfish_js_html_html_html.html">darkfish_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/jquery_js_html_html_html.html">jquery_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/navigation_js_html_html_html.html">navigation_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/search_index_js_html_html_html.html">search_index_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/search_js_html_html_html.html">search_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/searcher_js_html_html_html.html">searcher_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/rdoc_css_html_html_html.html">rdoc_css_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/table_of_contents_html_html_html_html.html">table_of_contents_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/fonts_css_html_html.html">fonts_css_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/index_html_html_html.html">index_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/darkfish_js_html_html.html">darkfish_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/jquery_js_html_html.html">jquery_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/navigation_js_html_html.html">navigation_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/search_index_js_html_html.html">search_index_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/search_js_html_html.html">search_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/searcher_js_html_html.html">searcher_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/rdoc_css_html_html.html">rdoc_css_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/table_of_contents_html_html_html.html">table_of_contents_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/fonts_css_html.html">fonts_css.html</a>
+  
+    <li class="file"><a href="./doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="./doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="./doc/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+  </ul>
 </nav>
 
-<main role="main" aria-labelledby="module-Examenes">
-  <h1 id="module-Examenes" class="module">
-    module Examenes
-  </h1>
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
 
-  <section class="description">
-    <dl class="rdoc-list note-list"><dt>Autor
-<dd>
-<h1 id="module-Examenes-label-Modulo+Examenes">Modulo <a href="Examenes.html">Examenes</a><span><a href="#module-Examenes-label-Modulo+Examenes">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+  <ul class="link-list">
+  
+    <li><a href="./Examenes.html">Examenes</a>
+  
+    <li><a href="./Examenes/ExamenCompleto.html">Examenes::ExamenCompleto</a>
+  
+    <li><a href="./Examenes/List.html">Examenes::List</a>
+  
+    <li><a href="./Examenes/PreguntaSimple.html">Examenes::PreguntaSimple</a>
+  
+    <li><a href="./Examenes/UI.html">Examenes::UI</a>
+  
+    <li><a href="./Examenes/VerdaderoFalso.html">Examenes::VerdaderoFalso</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module Examenes</h1>
+
+  <div id="description" class="description">
+    
+<h1 id="label-Modulo+Examenes">Modulo <a href="Examenes.html">Examenes</a><span><a href="#label-Modulo+Examenes">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
 <p>Probando RDOC</p>
 
-<h3 id="module-Examenes-label-Clase+ExamenCompleto">Clase <a href="Examenes/ExamenCompleto.html">ExamenCompleto</a><span><a href="#module-Examenes-label-Clase+ExamenCompleto">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Clase+ExamenCompleto">Clase <a href="Examenes/ExamenCompleto.html">ExamenCompleto</a><span><a href="#label-Clase+ExamenCompleto">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
 
 <p>Definición de la clase <a
 href="Examenes/ExamenCompleto.html">ExamenCompleto</a> compuesta por</p>
@@ -93,10 +541,74 @@ href="Examenes/ExamenCompleto.html">ExamenCompleto</a> compuesta por</p>
 <p>metodo initialize</p>
 </li><li>
 <p>metodo obtenerPreguntas</p>
+</li><li>
+<p>metodo establecerPreguntas</p>
+</li><li>
+<p>metodo obtenerSoluciones</p>
+</li><li>
+<p>metodo establecerSoluciones</p>
+</li><li>
+<p>metodo obtenerPregunta(numero)</p>
 </li></ul>
-</dd></dl>
 
-  </section>
+<h1 id="label-Modulo+Examenes">Modulo <a href="Examenes.html">Examenes</a><span><a href="#label-Modulo+Examenes">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>Probando RDOC</p>
+
+<h3 id="label-Clase+UI">Clase <a href="Examenes/UI.html">UI</a><span><a href="#label-Clase+UI">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Definición de la clase <a href="Examenes/UI.html">UI</a> compuesta por</p>
+<ul><li>
+<p>metodo initialize</p>
+</li><li>
+<p>metodo mostrarPreguntas</p>
+</li><li>
+<p>metodo input</p>
+</li><li>
+<p>metodo comparar</p>
+</li><li>
+<p>metodo notafinal</p>
+</li><li>
+<p>metodo cabecera</p>
+</li><li>
+<p>metodo examinar</p>
+</li><li>
+<p>metodo invertirLista</p>
+</li><li>
+<p>metodo invertirExamen</p>
+</li><li>
+<p>metodo invertir</p>
+</li></ul>
+
+<h1 id="label-Modulo+Examenes">Modulo <a href="Examenes.html">Examenes</a><span><a href="#label-Modulo+Examenes">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>Probando RDOC</p>
+
+<h3 id="label-Pregunta+Simple">Pregunta Simple<span><a href="#label-Pregunta+Simple">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Definición de la clase Pregunta Simple compuesta por</p>
+<ul><li>
+<p>metodo initialize</p>
+</li><li>
+<p>metodo numero</p>
+</li><li>
+<p>metodo obtenerRespuestas</p>
+</li><li>
+<p>mostrar</p>
+</li><li>
+<p>&lt;=&gt;</p>
+</li><li>
+<h2 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+</li></ul>
+
+<h3 id="label-Verdadero+Falaso">Verdadero Falaso<span><a href="#label-Verdadero+Falaso">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Definición de la clase Pregunta Simple compuesta por</p>
+<ul><li>
+<p>metodo initialize</p>
+</li></ul>
+
+  </div><!-- description -->
 
   
   
@@ -107,15 +619,14 @@ href="Examenes/ExamenCompleto.html">ExamenCompleto</a> compuesta por</p>
     
 
     
-    <section class="constants-list">
-      <header>
-        <h3>Constants</h3>
-      </header>
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
       <dl>
       
         <dt id="VERSION">VERSION
         
-        <dd>
+        <dd class="description">
         
       
       </dl>
@@ -124,14 +635,16 @@ href="Examenes/ExamenCompleto.html">ExamenCompleto</a> compuesta por</p>
 
     
 
+    <!-- Methods -->
     
-  </section>
-</main>
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
-<footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
-  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
 </footer>
 

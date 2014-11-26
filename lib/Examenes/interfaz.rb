@@ -3,11 +3,31 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec'
 
+# = Modulo Examenes
+#
+# Probando RDOC
+#
+# === Clase UI
+#
+# Definición de la clase UI compuesta por
+# * metodo initialize
+# * metodo mostrarPreguntas
+# * metodo input
+# * metodo comparar
+# * metodo notafinal
+# * metodo cabecera
+# * metodo examinar
+# * metodo invertirLista
+# * metodo invertirExamen
+# * metodo invertir
+
 module Examenes
   class UI
+      
+     # Tres tipos de atributos, contenido, aciertos y nota.
     attr_reader :contenido, :aciertos, :nota
     
-    
+    # Constructor incializa los atributos
     def initialize (examen)
       @contenido = examen
       @aciertos = 0
@@ -15,14 +35,14 @@ module Examenes
       @numeroPreguntas = examen.lista_preguntas.count
     end
     
-    
+    # Muestra por pantalla la pregunta
     def mostrarPregunta(numero)
       print "Pregunta"
       puts numero
       return @contenido.obtenerPregunta(numero)
     end
     
-    
+     # Muestra por pantalla la respuesta correspondiente
     def input(numeroPregunta, resp=0)
       puts ""
       print "Respuesta: "
@@ -41,7 +61,7 @@ module Examenes
       return true
     end
     
-    
+    # Realiza una comparación de la respuesta respondida
     def comparar(numeroPregunta, respuesta)
       if respuesta == @contenido.lista_soluciones.obtenerValor(numeroPregunta) then
         @aciertos = @aciertos + 1
@@ -49,7 +69,7 @@ module Examenes
       end
     end
 
-
+    # Muestra la nota final del examen
     def notaFinal
       print "Aciertos: "
       print @aciertos
@@ -61,7 +81,7 @@ module Examenes
       return @nota
     end
     
-    
+    # Mensaje aparece antes de ejecutar las operaciones
     def cabecera
       puts ""
       puts ""
@@ -72,7 +92,7 @@ module Examenes
       puts " preguntas."
     end
     
-
+    # Examina la respuesta introducida
     def examinar(*resp)
       cabecera
       for i in 1..@numeroPreguntas
@@ -82,12 +102,14 @@ module Examenes
       return notaFinal
     end
     
+    #Invierte la lista
     def invertirLista(lista)
         listaTemp = Examenes::List.new
         lista.map { |elemento| listaTemp.push(elemento) }
         return listaTemp
     end
 
+    #Invierte las preguntas del examen
     def invertirExamen(examen)
         preguntas = examen.obtenerPreguntas
         soluciones = examen.obtenerSoluciones
