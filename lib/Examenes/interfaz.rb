@@ -85,11 +85,11 @@ module Examenes
     def cabecera
       puts ""
       puts ""
-      puts "El examen va a comenzar."
-      puts "  Debe responder poniendo solo el caracter de la respuesta elegida."
+      puts "***Examen de Lenguajes y Paradigmas de la Programacion***"
+      puts "  Responda poniendo el caracter de la respuesta elegida."
       print " El examen consta de "
       print @numeroPreguntas
-      puts " preguntas."
+      puts " preguntas tipo test."
     end
     
     # Examina la respuesta introducida
@@ -111,16 +111,10 @@ module Examenes
 
     #Invierte las preguntas del examen
     def invertirExamen(examen)
-        preguntas = examen.obtenerPreguntas
-        soluciones = examen.obtenerSoluciones
-        
-        preguntas = invertirLista(preguntas)
-        soluciones = invertirLista(soluciones)
-        
-        examen.establecerPreguntas(preguntas)
-        examen.establecerSoluciones(soluciones)
+        examen.establecerPreguntas (invertirLista (examen.obtenerPreguntas))
+        examen.establecerSoluciones (invertirLista (examen.obtenerSoluciones))
         return examen
-    end      
+    end 
     
     def invertir
       @contenido = invertirExamen(@contenido)
