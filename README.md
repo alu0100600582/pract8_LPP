@@ -12,6 +12,6 @@ COVERALLS-
 
 
 TRAVIS-
-https://travis-ci.org/alu0100600582/pract8_LPP.svg?branch=master
+[![Build Status](https://travis-ci.org/alu0100600582/pract8_LPP.svg?branch=master)](https://travis-ci.org/alu0100600582/pract8_LPP)
 
 
