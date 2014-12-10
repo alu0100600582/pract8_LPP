@@ -7,7 +7,7 @@ require 'rspec'
 
 module Examenes
     
-    class ExamGUI
+    class Quiz
         attr_accessor :exam, :name
             
         def initialize(name = "Sin Nombre", &block)
