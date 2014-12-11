@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Examenes::VERSION
   spec.authors       = ["Krishna Hemnani, Francisco Mendoza"]
   spec.email         = ["alu0100536874@ull.edu.es, alu0100600582@ull.edu.es"]
-  spec.description   = %q{TODO: Gema para la clase 'Examenes'}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Gema para la clase 'Examenes'}
+  spec.summary       = %q{Gema para la creacion de examenes}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
-  #spec.add_development_dependency "guard"
-  #spec.add_development_dependency "guard-rspec"
-  #spec.add_development_dependency "guard-bundler"
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "guard-bundler"
   spec.add_development_dependency "coveralls"
 end
