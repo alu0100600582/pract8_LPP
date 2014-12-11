@@ -8,48 +8,12 @@ class Quiz
                 @answers = []
                 @i = 0
                 @counter = 0
-
-<<<<<<< HEAD
-module Examenes
-    
-    class Quiz
-        attr_accessor :exam, :name
-            
-        def initialize(name = "Sin Nombre", &block)
-            @exam = PreguntaSimple.new(List.new)
-            @name = name
-            
-            instance_eval &block
-        end
-        
-        def question(text, options = {})
-            distractors = []
-            distractors << options[:wrong] while options[:wrong]
-            
-            if(options[:right] == 'FALSE' || options[:right] == 'TRUE')
-                add(:type => 0, :text => text, :right => options[:right])
-            elsif
-                add(:type => 1, :text => text, :right => options[:right] , :distractor => distractors )
-            end
-        end
-        
-        def add(args) #Añade una pregunta al examen
-            if args[:type] == 1 #La pregunta es SimpleChoice
-                q = PreguntaSimple.new(
-                    :text => args[:text],
-                    :right => args[:right],
-                    :distractor => args[:distractor])
-            elsif args[:type] == 0 #La pregunta es TrueFalse
-                q = VerdaderoFalso.new(
-                    :text => args[:text],
-                    :right => args[:right])
-=======
+                
         if block_given?
             if block.arity == 1
                 yield self
             else
                 instance_eval &block
->>>>>>> c6675573135584b000b7de74a61ffcf71c35324b
             end
         end
     end
