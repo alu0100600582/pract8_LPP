@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'Examenes/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Examenes"
+  spec.name          = "Examenes2.0"
   spec.version       = Examenes::VERSION
   spec.authors       = ["Krishna Hemnani, Francisco Mendoza"]
   spec.email         = ["alu0100536874@ull.edu.es, alu0100600582@ull.edu.es"]
-  spec.description   = %q{TODO: Gema para la clase 'Examenes'}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Gema para la clase 'Examenes'}
+  spec.summary       = %q{Gema para la creacion de examenes}
   spec.homepage      = ""
   spec.license       = "MIT"
 
