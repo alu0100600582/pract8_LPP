@@ -11,3 +11,7 @@ COVERALLS-
 -[![Coverage Status](https://img.shields.io/coveralls/alu0100600582/pract8_LPP.svg)](https://coveralls.io/r/alu0100600582/pract8_LPP)
 
 
+TRAVIS-
+[![Build Status](https://travis-ci.org/alu0100600582/pract8_LPP.svg?branch=master)](https://travis-ci.org/alu0100600582/pract8_LPP)
+
+
