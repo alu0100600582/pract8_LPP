@@ -8,7 +8,7 @@ class Quiz
                 @answers = []
                 @i = 0
                 @counter = 0
-
+                
         if block_given?
             if block.arity == 1
                 yield self
