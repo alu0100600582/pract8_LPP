@@ -1,4 +1,5 @@
 class Arbol
+    require 'thread'
     attr_reader :edad, :altura, :contador
     
     def initialize()
@@ -50,4 +51,7 @@ class Arbol
 		end
 	end
     
+end
+
+if __FILE__ == $0 then 
 end
