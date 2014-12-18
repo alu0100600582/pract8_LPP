@@ -46,6 +46,16 @@ class Quiz
         questions << q
         @i += 1
     end
+    
+    def right
+    :right
+  end 
+  
+  def wrong
+    @counter += 1
+    [:wrong, @counter]
+  end 
+    
 
     def run eleccion
         cor = ""
