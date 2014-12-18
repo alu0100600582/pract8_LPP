@@ -11,5 +11,6 @@ require "Examenes/Listas"
 require "Examenes/interfaz.rb"
 require "Examenes/examen.rb"
 require 'Examenes/quiz.rb'
+require 'Examenes/naranjero.rb'
 module Examenes
 end
